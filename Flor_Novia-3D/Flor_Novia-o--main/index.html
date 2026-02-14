@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Flower, CSS + JS</title>
+    <link
+      rel="stylesheet"
+      href="https://public.codepenassets.com/css/reset-2.0.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="main-content">
+      <div class="container" id="start-btn-container">
+        <button id="start-btn" class="button"></button>
+      </div>
+      <audio
+        id="bg-music"
+        src="musica/𝙄𝙩 𝙨 𝙗𝙚𝙚𝙣 𝙖 𝙡𝙤𝙣𝙜 𝙡𝙤𝙣𝙜 𝙩𝙞𝙢𝙚 𝘴𝘭𝘰𝘸𝘦𝘥 𝘥𝘰𝘸𝘯 𝘳𝘦𝘷𝘦𝘳𝘣 𝘰𝘯𝘭𝘺 𝘵𝘳𝘶𝘮𝘱𝘦𝘵.mp3"
+        preload="none"
+        loop
+      ></audio>
+      <canvas
+        id="galaxy-canvas"
+        style="
+          display: none;
+          opacity: 0;
+          will-change: opacity;
+          position: fixed;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: 10;
+        "
+      ></canvas>
+      <div class="wrapper" style="display: none">
+        <div class="flower"></div>
+      </div>
+      <div class="flower-message" hidden style="display: none"></div>
+      <canvas
+        id="particles-canvas"
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          pointer-events: none;
+          z-index: 0;
+        "
+      ></canvas>
+      <!-- Botón cuadrado personalizado oculto al inicio -->
+      <div
+        id="custom-nav-btn"
+        hidden
+        style="
+          position: fixed;
+          bottom: 4vh;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 48px;
+          height: 48px;
+          border: 3px solid #fff;
+          border-radius: 14px;
+          z-index: 999;
+          background: transparent;
+        "
+      ></div>
+    </div>
+    <style>
+      /* Eliminado keyframes spin: no se usa loader */
+    </style>
+    <!-- partial -->
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

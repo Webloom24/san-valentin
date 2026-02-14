@@ -1,0 +1,344 @@
+[hidden] {
+  display: none !important;
+}
+#custom-nav-btn {
+  display: none !important;
+}
+/* Contraste mejorado para el texto del mensaje */
+.flower-message {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85) !important;
+  color: #fff !important;
+  /* Elimino el efecto iluminado, mantengo contraste */
+  border: 2px solid #fff !important;
+  box-shadow: 0 4px 32px #000c;
+  border: 4px solid #fff;
+  color: #fff !important;
+  background: rgba(0, 0, 0, 0.55) !important;
+  letter-spacing: 0px;
+  z-index: 10;
+  white-space: normal;
+  /* opacity se controla por JS para fade in/out */
+  transition: opacity 0.7s;
+  text-align: center;
+  max-width: 95vw;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 1em 1.2em;
+  box-sizing: border-box;
+  border-radius: 0.7em;
+  box-shadow:
+    0 2px 24px #000a,
+    0 0 0 2px #fff5;
+  border: 2px solid #fff5;
+  line-height: 1.4;
+  font-size: 2.2vw;
+}
+HTML,
+BODY {
+  height: 100%;
+  overflow: hidden;
+}
+
+BODY {
+  background: rgba(0, 0, 0, 0.85) !important;
+  background-image:
+    linear-gradient(#0f0f0f 1px, transparent 1px),
+    linear-gradient(to right, #0f0f0f 1px, transparent 1px);
+  background-size: 3.3333333333vmin 3.3333333333vmin;
+  color: #fff !important;
+}
+
+.range {
+  /* display: none; */
+  position: absolute;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 10vmin;
+  height: 10vmin;
+  font-size: 10vmin;
+  transform: rotateX(-45deg);
+  transform-style: preserve-3d;
+  animation: move-left 1.5s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards;
+}
+@keyframes move-left {
+  0% {
+    transform: rotateX(-45deg) translateX(0);
+  }
+  100% {
+    transform: rotateX(-45deg) translateX(-20vw);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: rotateX(-45deg) translateY(0);
+  }
+  100% {
+    transform: rotateX(-45deg) translateY(-15vh);
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 25vmin !important;
+    height: 25vmin !important;
+    font-size: 15vmin !important;
+    animation: move-up 1.2s cubic-bezier(0.7, 0, 0.3, 1) 1 forwards !important;
+    left: 43% !important;
+    transform: translateX(-50%) rotateX(-45deg) !important;
+  }
+  .flower-message {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 8vh !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    white-space: normal !important;
+    font-size: 5.2vw !important;
+    text-align: center !important;
+    max-width: 98vw !important;
+    z-index: 100 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    padding: 1em 1.2em !important;
+    box-sizing: border-box !important;
+    border-radius: 0.7em !important;
+    background: rgba(0, 0, 0, 0.25) !important;
+    line-height: 1.35 !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .wrapper {
+    width: 20vmin !important;
+    height: 20vmin !important;
+    font-size: 12vmin !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .wrapper {
+    width: 15vmin !important;
+    height: 15vmin !important;
+    font-size: 10vmin !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .wrapper {
+    width: 12vmin !important;
+    height: 12vmin !important;
+    font-size: 8vmin !important;
+  }
+  .flower-message {
+    font-size: 5vmin !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: 60vw !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    padding: 0.5em 1em !important;
+    box-sizing: border-box !important;
+    border-radius: 0.5em !important;
+    background: rgba(0, 0, 0, 0.25) !important;
+  }
+}
+
+.flower {
+  width: 10vmin;
+  height: 10vmin;
+  -webkit-animation: rotate-flower 30s linear infinite;
+  animation: rotate-flower 30s linear infinite;
+  transform-style: preserve-3d;
+}
+.flower:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: radial-gradient(
+    circle,
+    hsl(340, 80%, 85%) 0%,
+    hsl(320, 70%, 65%) 60%,
+    hsl(0, 12%, 75%) 100%
+  ); /* Followers - Color de centro */
+  border-radius: 50%;
+  transform: rotateX(90deg);
+}
+
+.petal {
+  position: absolute;
+  z-index: 20;
+  bottom: 80%;
+  left: -10vmin;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+}
+
+.box {
+  width: 30vmin;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  -webkit-animation: rotate-box 12s infinite;
+  animation: rotate-box 12s infinite;
+}
+
+.shape {
+  width: 0.5em;
+  height: 0.5em;
+  margin: auto;
+  background: currentColor;
+  box-shadow:
+    0.5em 0 0 0,
+    1em 0 0 0,
+    -1em 0 0 0,
+    -0.5em 0 0 0;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes rotate-box {
+  0% {
+    transform: rotateX(3.5deg);
+  }
+  15% {
+    transform: rotateX(3.5deg);
+  }
+  50% {
+    transform: rotateX(-7deg);
+  }
+  80% {
+    transform: rotateX(-7deg);
+  }
+  100% {
+    transform: rotateX(3.5deg);
+  }
+}
+
+@keyframes rotate-box {
+  0% {
+    transform: rotateX(3.5deg);
+  }
+  15% {
+    transform: rotateX(3.5deg);
+  }
+  50% {
+    transform: rotateX(-7deg);
+  }
+  80% {
+    transform: rotateX(-7deg);
+  }
+  100% {
+    transform: rotateX(3.5deg);
+  }
+}
+@-webkit-keyframes rotate-flower {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-flower {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+#galaxy-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background: transparent;
+}
+
+/* From Uiverse.io by Spacious74 */
+.container .button {
+  font-size: 1.4em;
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #000000b4;
+}
+
+@media (min-width: 1025px) {
+  .container .button {
+    font-size: 2.2em;
+    padding: 1em 1.5em;
+  }
+}
+.container {
+  position: relative;
+  padding: 3px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  border-radius: 0.9em;
+  transition: all 0.4s ease;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 0.9em;
+  z-index: -10;
+  filter: blur(0);
+  transition: filter 0.4s ease;
+}
+.container:hover::before {
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  filter: blur(1.2em);
+}
+.container:active::before {
+  filter: blur(0.2em);
+}
+
+/* Canvas de partículas siempre detrás */
+#particles-canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.flower-message {
+  z-index: 3;
+}
